@@ -95,6 +95,22 @@ body {
 	transform: rotateY(180deg);
 }
 
+#ribbon2 {
+  position: fixed;
+  top: 40%;
+  text-align: center;
+  width: 102%;
+  margin-left: -2%;
+  background: purple;
+  padding: 5px;
+}
+
+#ribbon2 div {
+  padding: 15px;
+  color: white;
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed white;
+}
 
 /* https://css-tricks.com/snippets/css/ribbon/ */
 .ribbon {

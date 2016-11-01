@@ -9,6 +9,7 @@ img.src = './photo.jpg';
 
 function reveal() {
   document.getElementById("ribbon").style.display = "none";
+  document.getElementById("ribbon2").style.display = "none";
   document.getElementById("front").style.display = "block";
   document.getElementById("back").style.display = "block";
 }
