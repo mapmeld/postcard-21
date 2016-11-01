@@ -8,20 +8,32 @@
   </head>
   <body>
     <div id="wrapper">
+      <div id="ribbon">------ Swipe to See ------</div>
       <div id="front">
-        <div id="photo">
+        <div id="loading">Loading postcard...</div>
+        <div id="photo" onload="hideLoading()">
         </div>
       </div>
       <div id="back">
         <div id="text">
           Hey!
+<p>
+These are some yummy snacks that I picked up in Istanbul on my way to Dubai.
+</p>
+<p>
+I'm making a postcard thing. Let me know if it works.
+</p>
+-- Nick
         </div>
         <pre id="address">
+          To:
+
 Kaushi
 Dubai, UAE
         </pre>
       </div>
     </div>
+    <script src="./hammer.min.js"></script>
     <script src="./postcards.js"></script>
   </body>
 </html>

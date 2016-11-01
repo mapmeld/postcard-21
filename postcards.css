@@ -23,21 +23,22 @@ html, body, #front, #back, #photo {
 }
 
 #photo {
-  background-image: url(./photo.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+#loading {
+  height: 30px;
+  font-size: 30px;
+  margin-bottom: -30px;
 }
 
 /* https://davidwalsh.name/css-flip */
 
 /* entire container, keeps perspective */
 body {
-	perspective: 1000px;
-}
-
-#wrapper.flip {
-	transform: rotateY(180deg);
+	perspective: 1200px;
 }
 
 #wrapper {
@@ -52,13 +53,21 @@ body {
   position: absolute;
 	top: 0;
 	left: 0;
-  font-size: 200%;
+  font-size: 150%;
+  display: none;
+}
+
+#ribbon {
+  font-size: 300%;
+  text-align: center;
+  margin-top: 100px;
 }
 
 #text {
   width: 40%;
   float: left;
   padding: 10px;
+  border-right: 2px solid silver;
 }
 
 #address {
