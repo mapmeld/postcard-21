@@ -14,6 +14,19 @@ function reveal() {
   document.getElementById("back").style.display = "block";
 }
 
+var mouseDown = false;
+document.getElementById("wrapper").onmousedown = function() {
+  mouseDown = true;
+};
+document.getElementById("wrapper").onmouseup = function() {
+  mouseDown = false;
+};
+document.getElementById("wrapper").onmousemove = function(e) {
+  if (mouseDown) {
+    document.getElementById("ribbon22").style.paddingLeft = e.offsetX + 'px';
+  }
+};
+
 var mc = new Hammer(document.getElementById("wrapper"));
 var swiped = false;
 mc.on('swipe', function() {

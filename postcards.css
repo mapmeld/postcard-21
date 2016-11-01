@@ -96,6 +96,7 @@ body {
 }
 
 #ribbon2 {
+  color: white;
   position: fixed;
   top: 40%;
   text-align: center;
@@ -107,9 +108,9 @@ body {
 
 #ribbon2 div {
   padding: 15px;
-  color: white;
   border-top: 2px dashed white;
   border-bottom: 2px dashed white;
+  font-size: 300%;
 }
 
 /* https://css-tricks.com/snippets/css/ribbon/ */
