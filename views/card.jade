@@ -1,0 +1,20 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    title Postcard 101
+    link(rel="stylesheet", href="/postcards.css")
+  body
+    #wrapper
+      #ribbon.ribbon Swipe to Open, Tap to Turn Over
+      #ribbon2
+        #ribbon22 &rarr; ✂ &rarr;
+      #front
+        #loading Loading postcard...
+        #photo(onload="hideLoading()")
+      #back
+        #text
+        pre#address
+    script(src="/lib/hammer.min.js")
+    script(src="/postcards.js")
