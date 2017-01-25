@@ -22,9 +22,12 @@ document.getElementById("wrapper").onmouseup = function() {
   mouseDown = false;
 };
 document.getElementById("wrapper").onmousemove = function(e) {
-  //if (mouseDown) {
+  if (mouseDown) {
     document.getElementById("ribbon22").style.paddingLeft = e.offsetX + 'px';
-  //}
+  }
+};
+document.getElementById("wrapper").ontouchmove = function(e) {
+  document.getElementById("ribbon22").style.paddingLeft = (e.touches[0].clientX) + 'px';
 };
 
 var mc = new Hammer(document.getElementById("wrapper"));
