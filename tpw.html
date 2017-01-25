@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Postcard 101</title>
+    <link rel="stylesheet" href="./postcardmy.css?my"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="ribbon" class="ribbon">Swipe to Open, Tap to Turn Over</div>
+      <div id="ribbon2">
+        <div id="ribbon22">&rarr; ✂ &rarr;</div>
+      </div>
+      <div id="front">
+        <div id="loading">Loading postcard...</div>
+        <div id="photo" onload="hideLoading()">
+          <img class='burmalabel' src='//www.freelang.net/expressions/langues/bir_nvelan.gif'/>
+        </div>
+      </div>
+      <div id="back">
+        <div id="text">
+          Mingalaba!
+<p>
+Happy Chinese New Year, from 香港!
+</p>
+<p>
+Enjoy some 🍜  😋
+</p>
+-- Nick
+        </div>
+        <pre id="address">
+          To:
+
+Thin Pyai Win
+Yangon 🇲🇲
+        </pre>
+      </div>
+    </div>
+    <script src="./hammer.min.js"></script>
+    <script src="./postcardmy.js?ww"></script>
+  </body>
+</html>
