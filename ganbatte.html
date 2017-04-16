@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Ganbatte Kudasai!</title>
+    <style>
+body {
+  margin-top: 10%;
+  line-height: 600%;
+  background-color: #ff8ccc;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+  font-size: 300%;
+  color: white;
+  font-family: Arial, serif;
+  font-weight: normal;
+}
+.floater {
+  position: absolute;
+  font-size: 280%;
+}
+    </style>
+  </head>
+  <body>
+    <h1>がんばって<br/>ください<br/>Thin Pyai!</h1>
+    <script>
+var extras = ['🗾', '🍜', '🍱', '🌸', '♨️', '🇯🇵', '🏯', '⛩️', '🗼', '✈️', '🍣', '🏮', '💼', '🗻', '🚝'];
+function stuffHappens() {
+  var l = Math.round(Math.random() * window.innerWidth * 0.7 + 0.15 * window.innerWidth);
+  var t = Math.round(Math.random() * window.innerHeight * 0.7 + 0.15 * window.innerHeight);
+  var dest_l = Math.round(Math.random() * window.innerWidth * 2 - window.innerWidth / 2);
+  var dest_t = Math.round(Math.random() * window.innerHeight * 2 - window.innerHeight / 2);
+  var x = document.createElement('div');
+  x.className = 'floater';
+  x.style.left = l + 'px';
+  x.style.top = t + 'px';
+  x.innerHTML = extras[Math.floor( extras.length * Math.random() )];
+  document.body.appendChild(x);
+  var steps = 0;
+  var mover = setInterval(function() {
+    steps++;
+    x.style.left = Math.round(l + (l - dest_l) * steps / 30) + 'px';
+    x.style.top = Math.round(t + (t - dest_t) * steps / 30) + 'px';
+    if (steps >= 30) {
+      document.body.removeChild(x);
+      clearInterval(mover);
+      mover = null;
+    }
+  }, 100);
+}
+setTimeout(stuffHappens, 280);
+setInterval(stuffHappens, 600);
+    </script>
+  </body>
+</html>
