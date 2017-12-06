@@ -5,7 +5,7 @@ const bodyParser = require('koa-bodyparser');
 const convert = require('koa-convert');
 const session = require('koa-generic-session');
 const MongoStore = require('koa-generic-session-mongo');
-const jade = require('koa-jade-render');
+const Pug = require('koa-pug')
 const router = require('koa-router')();
 const compression = require('koa-compress');
 const mongoose = require('mongoose');
@@ -19,7 +19,7 @@ mongoose.connection.on("error", function(err) {
 });
 
 var app = new Koa();
-app.use(jade(path.join(__dirname, 'views')));
+new Pug({ app: app });
 
 app.use(convert(kstatic(__dirname + '/static')));
 app.use(bodyParser());
